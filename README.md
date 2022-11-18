@@ -1,17 +1,13 @@
-# react-image-zoom
+# react-image-zoom-lazyload
 
 ## Overview
 
 React component for desktop browsers for image zoom on mouse hover.
 
-## Demo
-
-[Demo](http://malaman.github.io/react-image-zoom/example/index.html)
-
 ## Install
 
 ```
-npm install react-image-zoom --save
+npm install react-image-zoom-lazyload --save
 ```
 
 ## Usage
@@ -19,7 +15,7 @@ npm install react-image-zoom --save
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactImageZoom from 'react-image-zoom';
+import ReactImageZoom from 'react-image-zoom-lazyload';
 
 const props = {width: 400, height: 250, zoomWidth: 500, img: "1.jpg"};
 ReactDOM.render(<ReactImageZoom {...props} />, document.getElementById('react-app'));
@@ -37,8 +33,5 @@ height is used (optional).
 - **zoomStyle** (string) - custom style applied to the zoomed image (i.e. 'opacity: 0.1;background-color: white;')(optional)
 - **zoomLensStyle** (string) custom style applied to to zoom lents (i.e. 'opacity: 0.4;background-color: gray;')
 - **zoomPosition** (string) - position of zoomed image. It can be:  `top`, `left`, `bottom`, `original` or the default `right`.
+- **lazyLoad** (boolean) - if set true the large image is only loaded when mouse hovers over small image
 
-
-## RouteMap
-
-- [ ] add sourceImg, zoomedImg properties to make it possible to use different images for source and zoomed images

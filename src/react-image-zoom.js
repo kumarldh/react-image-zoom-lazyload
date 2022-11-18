@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ImageZoom from 'js-image-zoom';
+import ImageZoom from './js-image-zoom-extended';
 
 class ReactImageZoom extends React.Component {
   constructor(props) {
@@ -55,7 +55,8 @@ ReactImageZoom.propTypes = {
   offset: PropTypes.object,
   zoomStyle: PropTypes.string,
   zoomLensStyle: PropTypes.string,
-  zoomPosition: PropTypes.oneOf(['top', 'left', 'bottom', 'right', 'original'])
+  zoomPosition: PropTypes.oneOf(['top', 'left', 'bottom', 'right', 'original']),
+  lazyLoad: PropTypes.bool,
 };
 
 export default ReactImageZoom;
